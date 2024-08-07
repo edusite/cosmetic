@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Beauty wibsite</title>
+ <link rel="stylesheet" type="text/css" href="final.prj1.html.css">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <nav class="navigation">
+  <a href="final.html" class="logo">
+   <img src="Final Project HTML\logo111.jpg">
+  </a>
+
+  <form class="search-box">
+   <input type="text" placeholder="Search Product Here">
+   <button>
+    <i class="fa-solid fa-magnifying-glass"></i>
+   </button>
+  </form>
+
+  <div class="nav-btns">
+   <a href="#" class="nav-user">
+    <i class="fa-regular fa-user"></i>
+   </a>
+
+   <a href="#" class="nav-cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+   </a>
+  </div>
+ </nav>
+
+ <section id="product-details">
+    <div class="d-product-img">
+      <img src="Final Project HTML\makeup\bt21.jpg">
+    </div>
+    <div class="d-product-text">
+      <span class="category">Cosmetic > Face Mackup</span>
+      <strong>BT21 Lipstick</strong>
+
+      <span class="raring">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span>200 Review</span>
+      </span>
+      <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Qui, sequi nemo esse rerum dicta, numquam ullam magnam officia repudiandae libero id aliquam doloribus porro explicabo ut deserunt laudantium delectus dolorum.</p>
+      <span class="price">20000k <del>30000k</del></span>
+      <div class="quantity">
+        <span>Quantity</span>
+        <input type="number" min="1" value="1">
+      </div>
+      <a href="#" class="add-cart-btn">Add To Cart</a>
+    </div>
+
+  </section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-company-box">
+      <a href="#" class="footer-logo">P & S</a>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook fa-bounce"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-bounce"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+      </div>
+    </div>
+
+
+    <div class="footer-llink-box">
+      <strong>Main Link's</strong>
+      <ul>
+        <li><a href="#">Our Product's</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaminer</a></li>
+        <li><a href="#">Team's And Conditation's</a></li>
+      </ul>
+    </div>
+
+
+        <div class="footer-llink-box">
+      <strong>Main Link's</strong>
+      <ul>
+        <li><a href="#">Our Product's</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaminer</a></li>
+        <li><a href="#">Team's And Conditation's</a></li>
+      </ul>
+    </div>
+
+
+        <div class="footer-llink-box">
+      <strong>Main Link's</strong>
+      <ul>
+        <li><a href="#">Our Product's</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaminer</a></li>
+        <li><a href="#">Team's And Conditation's</a></li>
+      </ul>
+    </div>
+</div>
+
+
+  <div class="footer-bottom">
+    <span class="footer-owner">Made By P & S's Beauty</span>
+    <span class="copyright">© Copyright 2024-Going To Internet</span>
+  </div>
+</footer>
+  
+  <!-- Jquery -->
+  <script src="Final Project HTML/jquery-3.7.1.js"></script>
+  <!-- script -->
+  <script>
+    // filter-link-active
+    var selector = '.new-p-heading li';
+
+    $(selector).on('click',function(){
+      $(selector).removeClass('active')
+      $(this).addClass('active')
+    });
+    // box-filter
+    $(document).ready(function(){
+      $('.new-p-heading li').click(function(){
+        const value = $(this).attr('data-filter');
+        if(value == 'all'){
+          $('.new-product-box').show('1000');
+        }
+        else{
+          $('.new-product-box').not('.'+value).hide('1000');
+          $('.new-product-box').filter('.'+value).show('1000');
+        }
+      });
+    })
+  </script>
+</body>
+</html>
